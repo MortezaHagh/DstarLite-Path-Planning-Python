@@ -41,4 +41,4 @@ class PlotAnimation1(object):
     def animate(self):
         self.anim = animation.FuncAnimation(
             self.fig, self.ani_update, init_func=self.ani_init, frames=self.path_len, repeat=False, interval=500, blit=True)
-        plt.show()
+        # plt.show()

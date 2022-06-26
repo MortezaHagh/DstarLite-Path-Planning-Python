@@ -31,8 +31,13 @@ print(path.nodes)
 print(path.dirs)
 print(path_length, path_smoothness, path_turns, path_time)
 
-# plot
+# # plot
 fig, ax = plot_model(model)
 plot_solution(path, ax)
-# PlotAnimation1(fig, ax, path)
 plt.show()
+
+# # animation
+# fig, ax = plot_model(model)
+# animation = PlotAnimation1(fig, ax, path)
+# animation.anim.save('results/animation1.gif', fps=4)
+# plt.show()
