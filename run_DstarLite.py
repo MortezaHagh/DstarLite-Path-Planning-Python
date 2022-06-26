@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from plot_model import plot_model
 from dstar_lite import dstar_lite
 from plot_solution import plot_solution
+from plot_animation import PlotAnimation1
 from cal_smoothness import cal_smoothness
 from create_dstarlite_model import CreateDstarLiteModel
 
@@ -31,6 +32,7 @@ print(path.dirs)
 print(path_length, path_smoothness, path_turns, path_time)
 
 # plot
-ax = plot_model(model)
+fig, ax = plot_model(model)
 plot_solution(path, ax)
+# PlotAnimation1(fig, ax, path)
 plt.show()

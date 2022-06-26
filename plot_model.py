@@ -33,7 +33,7 @@ def plot_model(model):
     ax.plot([model.map.x_max+0.5, model.map.x_min-0.5],
             [model.map.y_min-0.5, model.map.y_min-0.5], color='k', linewidth=4)
 
-    return ax
+    return fig, ax
 
 
 if __name__ == '__main__':
