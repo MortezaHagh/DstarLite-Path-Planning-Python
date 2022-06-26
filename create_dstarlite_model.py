@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from create_model_base import CreateBaseModel
 
+
 class CreateDstarLiteModel(CreateBaseModel):
     def __init__(self, setting):
         CreateBaseModel.__init__(self)
@@ -23,7 +24,7 @@ class CreateDstarLiteModel(CreateBaseModel):
         self.adj_type = setting['adj_type']
         self.dist_type = setting['dist_type']
         self.expand_method = setting['expand_method']
-        
+
         # successors and predecessors
         successors = [[] for i in range(self.nodes.count)]
         succ_cost = [[] for i in range(self.nodes.count)]

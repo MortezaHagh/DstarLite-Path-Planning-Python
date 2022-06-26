@@ -1,6 +1,7 @@
 import numpy as np
 
-def cal_cost(path): 
+
+def cal_cost(path):
 
     dxPath = np.diff(path.x)
     dyPath = np.diff(path.y)

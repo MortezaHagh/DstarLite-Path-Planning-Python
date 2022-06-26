@@ -1,7 +1,8 @@
 import numpy as np
 
+
 def top_key(open):
-    
+
     keys = np.array([op.key for op in open.list])
     keys = keys[-1::-1][:]
     ind = np.lexsort(keys.T)
@@ -11,8 +12,3 @@ def top_key(open):
     top_node.ind = ind[0]
 
     return top_node
-
-
-
-
-
