@@ -18,7 +18,7 @@ class Robot(object):
         self.dir = 90
         self.xs = 1
         self.ys = 1
-        self.xt = 6
+        self.xt = 7
         self.yt = 7
         self.start_node = (self.ys - map.y_min)*(map.nx) + \
             self.xs+abs(map.x_min)

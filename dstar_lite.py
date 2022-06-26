@@ -27,7 +27,6 @@ def dstar_lite(model):
     [G, RHS, open] = initialize(model)
 
     t = 1
-    new_obst_node = []
     current_dir = np.deg2rad(model.robot.dir)
     path_nodes = [model.robot.start_node]
 
