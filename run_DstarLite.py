@@ -12,6 +12,8 @@ from create_dstarlite_model import CreateDstarLiteModel
 # expand_method: random or heading
 setting = {'adj_type': '4adj', 'dist_type': 'manhattan',
            'expand_method': 'heading'}
+
+# model
 model = CreateDstarLiteModel(setting)
 
 # process time
