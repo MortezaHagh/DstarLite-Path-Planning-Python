@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 def plot_model(model):
     fig, ax = plt.subplots(1, 1)
+    ax.axis("off")
     ax.axis('equal')
     ax.axis([model.map.x_min-1, model.map.x_max+1,
             model.map.y_min-1, model.map.y_max+1])
