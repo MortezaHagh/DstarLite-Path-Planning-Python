@@ -71,7 +71,8 @@ class CreateDstarLiteModel(CreateBaseModel):
 
 if __name__ == '__main__':
     from plot_model import plot_model
-    setting = {'adj_type': '4adj', 'dist_type': 'manhattan'}
+    setting = {'adj_type': '4adj', 'dist_type': 'manhattan',
+               'expand_method': 'heading'}
     model = CreateDstarLiteModel(setting)
     plot_model(model)
     plt.show()
