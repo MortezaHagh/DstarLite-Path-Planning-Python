@@ -7,7 +7,7 @@ def update_vertex(open, RHS, G, update_list, model, start):
     for inode in update_list:
         if inode != model.robot.goal_node:
             succ = model.successors[inode]
-            succ_c = np.array(model.succ_cost[inode])
+            succ_c = model.succ_cost[inode]
             succ_g = np.array(G[succ])
             RHS[inode] = min(succ_g+succ_c)
 

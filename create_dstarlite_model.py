@@ -26,10 +26,14 @@ class CreateDstarLiteModel(CreateBaseModel):
         self.expand_method = setting['expand_method']
 
         # successors and predecessors
-        successors = [[] for i in range(self.nodes.count)]
-        succ_cost = [[] for i in range(self.nodes.count)]
-        predecessors = [[] for i in range(self.nodes.count)]
-        pred_cost = [[] for i in range(self.nodes.count)]
+        successors = [np.array([], dtype='int')
+                      for i in range(self.nodes.count)]
+        succ_cost = [np.array([], dtype='int')
+                     for i in range(self.nodes.count)]
+        predecessors = [np.array([], dtype='int')
+                        for i in range(self.nodes.count)]
+        pred_cost = [np.array([], dtype='int')
+                     for i in range(self.nodes.count)]
 
         for inode in range(self.nodes.count):
             if not inode in self.obst.nodes:
@@ -47,16 +51,20 @@ class CreateDstarLiteModel(CreateBaseModel):
                         new_node = inode+ix+iy*(self.map.nx)
 
                         if not new_node in self.obst.nodes:
-                            successors[inode].append(new_node)
-                            predecessors[new_node].append(inode)
+                            successors[inode] = np.append(
+                                successors[inode], new_node)
+                            predecessors[new_node] = np.append(
+                                predecessors[new_node], inode)
 
                             if ix != 0 and iy != 0:
                                 cost = edge_len
                             else:
                                 cost = 1
 
-                            succ_cost[inode].append(cost)
-                            pred_cost[new_node].append(cost)
+                            succ_cost[inode] = np.append(
+                                succ_cost[inode], cost)
+                            pred_cost[new_node] = np.append(
+                                pred_cost[new_node], cost)
 
         self.successors = successors
         self.succ_cost = succ_cost

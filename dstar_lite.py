@@ -41,7 +41,7 @@ def dstar_lite(model):
 
         # move robot to next node
         succ = model.successors[start.node]
-        succ_c = np.array(model.succ_cost[start.node])
+        succ_c = model.succ_cost[start.node]
         succ_g = np.array(G[succ])
         if model.expand_method == 'random':
             min_ind = np.argmin(succ_c+succ_g)
