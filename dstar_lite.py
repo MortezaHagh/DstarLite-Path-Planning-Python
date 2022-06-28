@@ -61,7 +61,6 @@ def dstar_lite(model):
         # move to start.node and add start.node to Path
         t = t+1
         path_nodes.append(start.node)
-        # print(start.node)
 
         # # check for update in edge costs (obstacles)
         # [open, RHS, model] = update_map(open, RHS, G, model, start, t)
