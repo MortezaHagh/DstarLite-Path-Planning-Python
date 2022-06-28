@@ -28,11 +28,11 @@ class CreateDstarLiteModel(CreateBaseModel):
         # successors and predecessors
         successors = [np.array([], dtype='int')
                       for i in range(self.nodes.count)]
-        succ_cost = [np.array([], dtype='int')
+        succ_cost = [np.array([])
                      for i in range(self.nodes.count)]
         predecessors = [np.array([], dtype='int')
                         for i in range(self.nodes.count)]
-        pred_cost = [np.array([], dtype='int')
+        pred_cost = [np.array([])
                      for i in range(self.nodes.count)]
 
         for inode in range(self.nodes.count):

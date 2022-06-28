@@ -9,7 +9,7 @@ def update_map(open, RHS, G, model, start, t):
         new_obst_node = 31
         for ind, node in enumerate(model.predecessors[new_obst_node]):
             model.pred_cost[new_obst_node][ind] = np.inf
-            suc_ind = model.successors[node].index(new_obst_node)
+            suc_ind = np.where(new_obst_node==model.successors[node])
             model.succ_cost[node][suc_ind] = np.inf
 
         xl = model.nodes.x[model.s_last]
