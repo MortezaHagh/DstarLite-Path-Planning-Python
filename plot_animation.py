@@ -16,9 +16,9 @@ class PlotAnimation1(object):
 
         line = [0, 0]
         line[0], = self.ax.plot(path.x[0], path.y[0], 'o',
-                                markerfacecolor='green', markeredgecolor='green', markersize=8)
+                                markerfacecolor='green', markeredgecolor='green', markersize=5)
         line[1], = self.ax.plot(path.x[0:2], path.y
-                                [0:2], color='green', linewidth=3)
+                                [0:2], color='green', linewidth=2)
         self.line = line
 
         self.animate()

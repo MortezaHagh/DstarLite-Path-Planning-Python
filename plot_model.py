@@ -9,10 +9,10 @@ def plot_model(model):
             model.map.y_min-1, model.map.y_max+1])
 
     # start
-    ax.plot(model.robot.xs, model.robot.ys, marker='^', markersize=14,
+    ax.plot(model.robot.xs, model.robot.ys, marker='^', markersize=10,
             markeredgecolor='g', markerfacecolor='g', label="Start")
     # target
-    ax.plot(model.robot.xt, model.robot.yt, marker='v', markersize=14,
+    ax.plot(model.robot.xt, model.robot.yt, marker='v', markersize=10,
             markeredgecolor='r', markerfacecolor='r', label="Destination")
 
     # # Obstacles
