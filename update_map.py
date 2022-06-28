@@ -23,5 +23,3 @@ def update_map(open, RHS, G, model, start, t):
         [open, RHS] = update_vertex(open, RHS, G, update_list, model, start)
 
     return open, RHS, model
-
-# [open, RHS, newobstNode, model] = update_map(open, RHS, G, model, start, t)
