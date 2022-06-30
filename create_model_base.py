@@ -21,9 +21,9 @@ class Robot(object):
         self.xt = 7
         self.yt = 7
         self.start_node = (self.ys - map.y_min)*(map.nx) + \
-            self.xs+abs(map.x_min)
+            self.xs-map.x_min
         self.goal_node = (self.yt - map.y_min)*(map.nx) + \
-            self.xt+abs(map.x_min)
+            self.xt-map.x_min
 
 
 class Obstacles(object):
@@ -43,7 +43,7 @@ class Obstacles(object):
         self.y = yc2 + yc3
 
         self.count = len(self.x)
-        self.nodes = [(y-map.y_min)*map.nx + x + abs(map.x_min)
+        self.nodes = [(y-map.y_min)*map.nx + x - map.x_min
                       for x, y in zip(self.x, self.y)]
 
 
